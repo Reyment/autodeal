@@ -1,17 +1,22 @@
-import CardProducts from "@/components/CardProducts";
-import HeroSection from "@/components/HeroSection";
-import Navbar from "@/components/Navbar";
+import Border from "@/components/Home/Border";
+import ButtonSelanjutnya from "@/components/Home/ButtonSelanjutnya";
+import HeroSection from "@/components/Home/HeroSection";
+import ProductList from "@/components/ProductList";
 
 export default function Home() {
   return (
-
-    <div className="min-h-screen bg-slate-200">
-      <Navbar />
-      <div className="px-20">
+    <section className="  w-full max-xl:px-[20px] xl:w-[1280px]">
       <HeroSection />
-      <CardProducts/>
-
-      </div>
-    </div>
-  )
+      <ProductList
+        srcImage="/svgs/new.svg"
+        textIklan="Iklan Terbaru Disekitarmu"
+      />
+      <Border />
+      <ProductList
+        srcImage="/images/new.png"
+        textIklan="Iklan Terbaru Lainnya"
+      />
+      <ButtonSelanjutnya />
+    </section>
+  );
 }
